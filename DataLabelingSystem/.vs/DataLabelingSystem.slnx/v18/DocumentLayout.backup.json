@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3FCE9DE4-142E-717E-6CD3-0076B5E5F63D}|DataLabeling.API\\DataLabeling.API.csproj|d:\\swp392\\swp_project\\datalabelingsystem\\datalabeling.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FCE9DE4-142E-717E-6CD3-0076B5E5F63D}|DataLabeling.API\\DataLabeling.API.csproj|solutionrelative:datalabeling.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +14,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.API\\Program.cs",
+              "RelativeDocumentMoniker": "DataLabeling.API\\Program.cs",
+              "ToolTip": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.API\\Program.cs*",
+              "RelativeToolTip": "DataLabeling.API\\Program.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-07T13:44:07.261Z",
+              "EditorCaption": ""
             }
           ]
         }
