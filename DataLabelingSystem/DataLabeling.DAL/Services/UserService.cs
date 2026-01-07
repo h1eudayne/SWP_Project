@@ -95,5 +95,51 @@ namespace DataLabeling.BLL.Services
                 return Convert.ToHexString(hashBytes);
             }
         }
+
+        public async Task<UserDto?> GetUserByIdAsync(int id)
+        {
+            var user = await _unitOfWork.Repository<User>().GetByIdAsync(id);
+            if (user == null) return null;
+
+            return new UserDto
+            {
+                Id = user.Id,
+                Username = user.Username,
+                FullName = user.FullName,
+                Email = user.Email,
+                Role = user.Role.ToString()
+            };
+        }
+
+        public async Task<UserDto> UpdateUserAsync(int id, UpdateUserDto dto)
+        {
+            var user = await _unitOfWork.Repository<User>().GetByIdAsync(id);
+            if (user == null) throw new Exception("Người dùng không tồn tại.");
+
+            user.FullName = dto.FullName;
+            user.Email = dto.Email;
+            user.Role = dto.Role;
+
+            _unitOfWork.Repository<User>().Update(user);
+            await _unitOfWork.CompleteAsync();
+
+            return new UserDto
+            {
+                Id = user.Id,
+                Username = user.Username,
+                FullName = user.FullName,
+                Email = user.Email,
+                Role = user.Role.ToString()
+            };
+        }
+
+        public async Task DeleteUserAsync(int id)
+        {
+            var user = await _unitOfWork.Repository<User>().GetByIdAsync(id);
+            if (user == null) throw new Exception("Người dùng không tồn tại.");
+            _unitOfWork.Repository<User>().Remove(user);
+
+            await _unitOfWork.CompleteAsync();
+        }
     }
 }

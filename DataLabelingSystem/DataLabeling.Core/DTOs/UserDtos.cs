@@ -36,4 +36,13 @@ namespace DataLabeling.Core.DTOs
         public string Email { get; set; } = string.Empty;
         public string Role { get; set; } = string.Empty;
     }
+    public class UpdateUserDto
+    {
+        public string FullName { get; set; } = string.Empty;
+
+        [EmailAddress]
+        public string Email { get; set; } = string.Empty;
+
+        public UserRole Role { get; set; } 
+    }
 }

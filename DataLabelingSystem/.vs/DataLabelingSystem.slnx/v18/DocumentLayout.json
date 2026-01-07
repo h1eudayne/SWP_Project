@@ -3,28 +3,96 @@
   "WorkspaceRootPath": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3FCE9DE4-142E-717E-6CD3-0076B5E5F63D}|DataLabeling.API\\DataLabeling.API.csproj|d:\\swp392\\swp_project\\datalabelingsystem\\datalabeling.api\\controllers\\reviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3FCE9DE4-142E-717E-6CD3-0076B5E5F63D}|DataLabeling.API\\DataLabeling.API.csproj|solutionrelative:datalabeling.api\\controllers\\reviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F3E0C035-E2A1-AC28-2F25-7A8FDCE2589B}|DataLabeling.DAL\\DataLabeling.DAL.csproj|d:\\swp392\\swp_project\\datalabelingsystem\\datalabeling.dal\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3E0C035-E2A1-AC28-2F25-7A8FDCE2589B}|DataLabeling.DAL\\DataLabeling.DAL.csproj|solutionrelative:datalabeling.dal\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F3E0C035-E2A1-AC28-2F25-7A8FDCE2589B}|DataLabeling.DAL\\DataLabeling.DAL.csproj|d:\\swp392\\swp_project\\datalabelingsystem\\datalabeling.dal\\services\\taskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F3E0C035-E2A1-AC28-2F25-7A8FDCE2589B}|DataLabeling.DAL\\DataLabeling.DAL.csproj|solutionrelative:datalabeling.dal\\services\\taskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3FCE9DE4-142E-717E-6CD3-0076B5E5F63D}|DataLabeling.API\\DataLabeling.API.csproj|d:\\swp392\\swp_project\\datalabelingsystem\\datalabeling.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FCE9DE4-142E-717E-6CD3-0076B5E5F63D}|DataLabeling.API\\DataLabeling.API.csproj|solutionrelative:datalabeling.api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C4F7FEAB-F4E7-1913-A1B3-076D43BD9B74}|DataLabeling.Core\\DataLabeling.Core.csproj|d:\\swp392\\swp_project\\datalabelingsystem\\datalabeling.core\\interfaces\\itaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C4F7FEAB-F4E7-1913-A1B3-076D43BD9B74}|DataLabeling.Core\\DataLabeling.Core.csproj|solutionrelative:datalabeling.core\\interfaces\\itaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C4F7FEAB-F4E7-1913-A1B3-076D43BD9B74}|DataLabeling.Core\\DataLabeling.Core.csproj|d:\\swp392\\swp_project\\datalabelingsystem\\datalabeling.core\\dtos\\taskdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C4F7FEAB-F4E7-1913-A1B3-076D43BD9B74}|DataLabeling.Core\\DataLabeling.Core.csproj|solutionrelative:datalabeling.core\\dtos\\taskdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C4F7FEAB-F4E7-1913-A1B3-076D43BD9B74}|DataLabeling.Core\\DataLabeling.Core.csproj|d:\\swp392\\swp_project\\datalabelingsystem\\datalabeling.core\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4F7FEAB-F4E7-1913-A1B3-076D43BD9B74}|DataLabeling.Core\\DataLabeling.Core.csproj|solutionrelative:datalabeling.core\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C4F7FEAB-F4E7-1913-A1B3-076D43BD9B74}|DataLabeling.Core\\DataLabeling.Core.csproj|d:\\swp392\\swp_project\\datalabelingsystem\\datalabeling.core\\dtos\\userdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C4F7FEAB-F4E7-1913-A1B3-076D43BD9B74}|DataLabeling.Core\\DataLabeling.Core.csproj|solutionrelative:datalabeling.core\\dtos\\userdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{F3E0C035-E2A1-AC28-2F25-7A8FDCE2589B}|DataLabeling.DAL\\DataLabeling.DAL.csproj|d:\\swp392\\swp_project\\datalabelingsystem\\datalabeling.dal\\services\\taskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3E0C035-E2A1-AC28-2F25-7A8FDCE2589B}|DataLabeling.DAL\\DataLabeling.DAL.csproj|solutionrelative:datalabeling.dal\\services\\taskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4F7FEAB-F4E7-1913-A1B3-076D43BD9B74}|DataLabeling.Core\\DataLabeling.Core.csproj|d:\\swp392\\swp_project\\datalabelingsystem\\datalabeling.core\\dtos\\taskdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4F7FEAB-F4E7-1913-A1B3-076D43BD9B74}|DataLabeling.Core\\DataLabeling.Core.csproj|solutionrelative:datalabeling.core\\dtos\\taskdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4F7FEAB-F4E7-1913-A1B3-076D43BD9B74}|DataLabeling.Core\\DataLabeling.Core.csproj|d:\\swp392\\swp_project\\datalabelingsystem\\datalabeling.core\\enums\\labeltask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4F7FEAB-F4E7-1913-A1B3-076D43BD9B74}|DataLabeling.Core\\DataLabeling.Core.csproj|solutionrelative:datalabeling.core\\enums\\labeltask.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4F7FEAB-F4E7-1913-A1B3-076D43BD9B74}|DataLabeling.Core\\DataLabeling.Core.csproj|d:\\swp392\\swp_project\\datalabelingsystem\\datalabeling.core\\enums\\errortype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4F7FEAB-F4E7-1913-A1B3-076D43BD9B74}|DataLabeling.Core\\DataLabeling.Core.csproj|solutionrelative:datalabeling.core\\enums\\errortype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4F7FEAB-F4E7-1913-A1B3-076D43BD9B74}|DataLabeling.Core\\DataLabeling.Core.csproj|d:\\swp392\\swp_project\\datalabelingsystem\\datalabeling.core\\enums\\dataitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4F7FEAB-F4E7-1913-A1B3-076D43BD9B74}|DataLabeling.Core\\DataLabeling.Core.csproj|solutionrelative:datalabeling.core\\enums\\dataitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4F7FEAB-F4E7-1913-A1B3-076D43BD9B74}|DataLabeling.Core\\DataLabeling.Core.csproj|d:\\swp392\\swp_project\\datalabelingsystem\\datalabeling.core\\enums\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4F7FEAB-F4E7-1913-A1B3-076D43BD9B74}|DataLabeling.Core\\DataLabeling.Core.csproj|solutionrelative:datalabeling.core\\enums\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4F7FEAB-F4E7-1913-A1B3-076D43BD9B74}|DataLabeling.Core\\DataLabeling.Core.csproj|d:\\swp392\\swp_project\\datalabelingsystem\\datalabeling.core\\enums\\taskstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4F7FEAB-F4E7-1913-A1B3-076D43BD9B74}|DataLabeling.Core\\DataLabeling.Core.csproj|solutionrelative:datalabeling.core\\enums\\taskstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4F7FEAB-F4E7-1913-A1B3-076D43BD9B74}|DataLabeling.Core\\DataLabeling.Core.csproj|d:\\swp392\\swp_project\\datalabelingsystem\\datalabeling.core\\enums\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4F7FEAB-F4E7-1913-A1B3-076D43BD9B74}|DataLabeling.Core\\DataLabeling.Core.csproj|solutionrelative:datalabeling.core\\enums\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4F7FEAB-F4E7-1913-A1B3-076D43BD9B74}|DataLabeling.Core\\DataLabeling.Core.csproj|d:\\swp392\\swp_project\\datalabelingsystem\\datalabeling.core\\enums\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4F7FEAB-F4E7-1913-A1B3-076D43BD9B74}|DataLabeling.Core\\DataLabeling.Core.csproj|solutionrelative:datalabeling.core\\enums\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4F7FEAB-F4E7-1913-A1B3-076D43BD9B74}|DataLabeling.Core\\DataLabeling.Core.csproj|d:\\swp392\\swp_project\\datalabelingsystem\\datalabeling.core\\interfaces\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4F7FEAB-F4E7-1913-A1B3-076D43BD9B74}|DataLabeling.Core\\DataLabeling.Core.csproj|solutionrelative:datalabeling.core\\interfaces\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4F7FEAB-F4E7-1913-A1B3-076D43BD9B74}|DataLabeling.Core\\DataLabeling.Core.csproj|d:\\swp392\\swp_project\\datalabelingsystem\\datalabeling.core\\interfaces\\iprojectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4F7FEAB-F4E7-1913-A1B3-076D43BD9B74}|DataLabeling.Core\\DataLabeling.Core.csproj|solutionrelative:datalabeling.core\\interfaces\\iprojectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4F7FEAB-F4E7-1913-A1B3-076D43BD9B74}|DataLabeling.Core\\DataLabeling.Core.csproj|d:\\swp392\\swp_project\\datalabelingsystem\\datalabeling.core\\interfaces\\itaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4F7FEAB-F4E7-1913-A1B3-076D43BD9B74}|DataLabeling.Core\\DataLabeling.Core.csproj|solutionrelative:datalabeling.core\\interfaces\\itaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4F7FEAB-F4E7-1913-A1B3-076D43BD9B74}|DataLabeling.Core\\DataLabeling.Core.csproj|d:\\swp392\\swp_project\\datalabelingsystem\\datalabeling.core\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4F7FEAB-F4E7-1913-A1B3-076D43BD9B74}|DataLabeling.Core\\DataLabeling.Core.csproj|solutionrelative:datalabeling.core\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3E0C035-E2A1-AC28-2F25-7A8FDCE2589B}|DataLabeling.DAL\\DataLabeling.DAL.csproj|d:\\swp392\\swp_project\\datalabelingsystem\\datalabeling.dal\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3E0C035-E2A1-AC28-2F25-7A8FDCE2589B}|DataLabeling.DAL\\DataLabeling.DAL.csproj|solutionrelative:datalabeling.dal\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3E0C035-E2A1-AC28-2F25-7A8FDCE2589B}|DataLabeling.DAL\\DataLabeling.DAL.csproj|d:\\swp392\\swp_project\\datalabelingsystem\\datalabeling.dal\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3E0C035-E2A1-AC28-2F25-7A8FDCE2589B}|DataLabeling.DAL\\DataLabeling.DAL.csproj|solutionrelative:datalabeling.dal\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F3E0C035-E2A1-AC28-2F25-7A8FDCE2589B}|DataLabeling.DAL\\DataLabeling.DAL.csproj|d:\\swp392\\swp_project\\datalabelingsystem\\datalabeling.dal\\services\\projectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F3E0C035-E2A1-AC28-2F25-7A8FDCE2589B}|DataLabeling.DAL\\DataLabeling.DAL.csproj|solutionrelative:datalabeling.dal\\services\\projectservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3FCE9DE4-142E-717E-6CD3-0076B5E5F63D}|DataLabeling.API\\DataLabeling.API.csproj|d:\\swp392\\swp_project\\datalabelingsystem\\datalabeling.api\\controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3FCE9DE4-142E-717E-6CD3-0076B5E5F63D}|DataLabeling.API\\DataLabeling.API.csproj|solutionrelative:datalabeling.api\\controllers\\projectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4F7FEAB-F4E7-1913-A1B3-076D43BD9B74}|DataLabeling.Core\\DataLabeling.Core.csproj|d:\\swp392\\swp_project\\datalabelingsystem\\datalabeling.core\\dtos\\projectstatisticsdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4F7FEAB-F4E7-1913-A1B3-076D43BD9B74}|DataLabeling.Core\\DataLabeling.Core.csproj|solutionrelative:datalabeling.core\\dtos\\projectstatisticsdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FCE9DE4-142E-717E-6CD3-0076B5E5F63D}|DataLabeling.API\\DataLabeling.API.csproj|d:\\swp392\\swp_project\\datalabelingsystem\\datalabeling.api\\controllers\\reviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FCE9DE4-142E-717E-6CD3-0076B5E5F63D}|DataLabeling.API\\DataLabeling.API.csproj|solutionrelative:datalabeling.api\\controllers\\reviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3FCE9DE4-142E-717E-6CD3-0076B5E5F63D}|DataLabeling.API\\DataLabeling.API.csproj|d:\\swp392\\swp_project\\datalabelingsystem\\datalabeling.api\\controllers\\taskcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,7 +106,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,7 +114,228 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.API\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "DataLabeling.API\\Controllers\\UserController.cs",
+              "ToolTip": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.API\\Controllers\\UserController.cs",
+              "RelativeToolTip": "DataLabeling.API\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-07T13:25:07.935Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.DAL\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "DataLabeling.DAL\\Services\\UserService.cs",
+              "ToolTip": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.DAL\\Services\\UserService.cs",
+              "RelativeToolTip": "DataLabeling.DAL\\Services\\UserService.cs",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAkwIoAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-07T13:23:38.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ErrorType.cs",
+              "DocumentMoniker": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.Core\\Enums\\ErrorType.cs",
+              "RelativeDocumentMoniker": "DataLabeling.Core\\Enums\\ErrorType.cs",
+              "ToolTip": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.Core\\Enums\\ErrorType.cs",
+              "RelativeToolTip": "DataLabeling.Core\\Enums\\ErrorType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-07T13:16:36.63Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DataItem.cs",
+              "DocumentMoniker": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.Core\\Enums\\DataItem.cs",
+              "RelativeDocumentMoniker": "DataLabeling.Core\\Enums\\DataItem.cs",
+              "ToolTip": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.Core\\Enums\\DataItem.cs",
+              "RelativeToolTip": "DataLabeling.Core\\Enums\\DataItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-07T13:16:31.354Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LabelTask.cs",
+              "DocumentMoniker": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.Core\\Enums\\LabelTask.cs",
+              "RelativeDocumentMoniker": "DataLabeling.Core\\Enums\\LabelTask.cs",
+              "ToolTip": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.Core\\Enums\\LabelTask.cs",
+              "RelativeToolTip": "DataLabeling.Core\\Enums\\LabelTask.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-07T13:16:29.894Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Project.cs",
+              "DocumentMoniker": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.Core\\Enums\\Project.cs",
+              "RelativeDocumentMoniker": "DataLabeling.Core\\Enums\\Project.cs",
+              "ToolTip": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.Core\\Enums\\Project.cs",
+              "RelativeToolTip": "DataLabeling.Core\\Enums\\Project.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-07T13:16:28.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TaskStatus.cs",
+              "DocumentMoniker": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.Core\\Enums\\TaskStatus.cs",
+              "RelativeDocumentMoniker": "DataLabeling.Core\\Enums\\TaskStatus.cs",
+              "ToolTip": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.Core\\Enums\\TaskStatus.cs",
+              "RelativeToolTip": "DataLabeling.Core\\Enums\\TaskStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-07T13:16:25.488Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.Core\\Enums\\User.cs",
+              "RelativeDocumentMoniker": "DataLabeling.Core\\Enums\\User.cs",
+              "ToolTip": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.Core\\Enums\\User.cs",
+              "RelativeToolTip": "DataLabeling.Core\\Enums\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-07T13:16:22.692Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UserRole.cs",
+              "DocumentMoniker": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.Core\\Enums\\UserRole.cs",
+              "RelativeDocumentMoniker": "DataLabeling.Core\\Enums\\UserRole.cs",
+              "ToolTip": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.Core\\Enums\\UserRole.cs",
+              "RelativeToolTip": "DataLabeling.Core\\Enums\\UserRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-07T13:16:20.836Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IGenericRepository.cs",
+              "DocumentMoniker": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.Core\\Interfaces\\IGenericRepository.cs",
+              "RelativeDocumentMoniker": "DataLabeling.Core\\Interfaces\\IGenericRepository.cs",
+              "ToolTip": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.Core\\Interfaces\\IGenericRepository.cs",
+              "RelativeToolTip": "DataLabeling.Core\\Interfaces\\IGenericRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-07T13:16:17.536Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.Core\\Interfaces\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "DataLabeling.Core\\Interfaces\\IUnitOfWork.cs",
+              "ToolTip": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.Core\\Interfaces\\IUnitOfWork.cs",
+              "RelativeToolTip": "DataLabeling.Core\\Interfaces\\IUnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-07T13:16:12.849Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.Core\\Interfaces\\IUserService.cs",
+              "RelativeDocumentMoniker": "DataLabeling.Core\\Interfaces\\IUserService.cs",
+              "ToolTip": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.Core\\Interfaces\\IUserService.cs",
+              "RelativeToolTip": "DataLabeling.Core\\Interfaces\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-07T13:16:10.802Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.DAL\\Repositories\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "DataLabeling.DAL\\Repositories\\GenericRepository.cs",
+              "ToolTip": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.DAL\\Repositories\\GenericRepository.cs",
+              "RelativeToolTip": "DataLabeling.DAL\\Repositories\\GenericRepository.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-07T13:16:04.578Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.DAL\\Repositories\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "DataLabeling.DAL\\Repositories\\UnitOfWork.cs",
+              "ToolTip": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.DAL\\Repositories\\UnitOfWork.cs",
+              "RelativeToolTip": "DataLabeling.DAL\\Repositories\\UnitOfWork.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-07T13:16:01.309Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ProjectService.cs",
+              "DocumentMoniker": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.DAL\\Services\\ProjectService.cs",
+              "RelativeDocumentMoniker": "DataLabeling.DAL\\Services\\ProjectService.cs",
+              "ToolTip": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.DAL\\Services\\ProjectService.cs",
+              "RelativeToolTip": "DataLabeling.DAL\\Services\\ProjectService.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAowHcAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-07T12:38:12.977Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IProjectService.cs",
+              "DocumentMoniker": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.Core\\Interfaces\\IProjectService.cs",
+              "RelativeDocumentMoniker": "DataLabeling.Core\\Interfaces\\IProjectService.cs",
+              "ToolTip": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.Core\\Interfaces\\IProjectService.cs",
+              "RelativeToolTip": "DataLabeling.Core\\Interfaces\\IProjectService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-07T12:37:40.428Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ProjectStatisticsDtos.cs",
+              "DocumentMoniker": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.Core\\DTOs\\ProjectStatisticsDtos.cs",
+              "RelativeDocumentMoniker": "DataLabeling.Core\\DTOs\\ProjectStatisticsDtos.cs",
+              "ToolTip": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.Core\\DTOs\\ProjectStatisticsDtos.cs",
+              "RelativeToolTip": "DataLabeling.Core\\DTOs\\ProjectStatisticsDtos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-07T12:36:48.328Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
               "Title": "ReviewController.cs",
               "DocumentMoniker": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.API\\Controllers\\ReviewController.cs",
               "RelativeDocumentMoniker": "DataLabeling.API\\Controllers\\ReviewController.cs",
@@ -59,20 +348,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "TaskService.cs",
               "DocumentMoniker": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.DAL\\Services\\TaskService.cs",
               "RelativeDocumentMoniker": "DataLabeling.DAL\\Services\\TaskService.cs",
               "ToolTip": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.DAL\\Services\\TaskService.cs",
               "RelativeToolTip": "DataLabeling.DAL\\Services\\TaskService.cs",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAgwEsAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAADcAAAAAAAAAAAAswEAAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-07T12:15:54.942Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 15,
               "Title": "ITaskService.cs",
               "DocumentMoniker": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.Core\\Interfaces\\ITaskService.cs",
               "RelativeDocumentMoniker": "DataLabeling.Core\\Interfaces\\ITaskService.cs",
@@ -85,46 +374,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "TaskDtos.cs",
               "DocumentMoniker": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.Core\\DTOs\\TaskDtos.cs",
               "RelativeDocumentMoniker": "DataLabeling.Core\\DTOs\\TaskDtos.cs",
               "ToolTip": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.Core\\DTOs\\TaskDtos.cs",
               "RelativeToolTip": "DataLabeling.Core\\DTOs\\TaskDtos.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAmwBwAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAACEAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-07T12:10:52.316Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "UserDtos.cs",
               "DocumentMoniker": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.Core\\DTOs\\UserDtos.cs",
               "RelativeDocumentMoniker": "DataLabeling.Core\\DTOs\\UserDtos.cs",
               "ToolTip": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.Core\\DTOs\\UserDtos.cs",
               "RelativeToolTip": "DataLabeling.Core\\DTOs\\UserDtos.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAswCQAAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAABcAAAAAAAAAAAAswC0AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-07T12:08:39.138Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 20,
               "Title": "ProjectController.cs",
               "DocumentMoniker": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.API\\Controllers\\ProjectController.cs",
               "RelativeDocumentMoniker": "DataLabeling.API\\Controllers\\ProjectController.cs",
               "ToolTip": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.API\\Controllers\\ProjectController.cs",
               "RelativeToolTip": "DataLabeling.API\\Controllers\\ProjectController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-07T12:08:27.443Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 23,
               "Title": "TaskController.cs",
               "DocumentMoniker": "D:\\swp392\\SWP_Project\\DataLabelingSystem\\DataLabeling.API\\Controllers\\TaskController.cs",
               "RelativeDocumentMoniker": "DataLabeling.API\\Controllers\\TaskController.cs",
@@ -132,8 +421,7 @@
               "RelativeToolTip": "DataLabeling.API\\Controllers\\TaskController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-07T12:08:25.975Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-07T12:08:25.975Z"
             }
           ]
         }

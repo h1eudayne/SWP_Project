@@ -21,12 +21,17 @@ namespace DataLabeling.Core.DTOs
         public string Instruction { get; set; } = string.Empty;
         public string Status { get; set; } = string.Empty;
         public string? LabelData { get; set; }
+        public string? ReviewerComment { get; set; }
+        public string ErrorType { get; set; } = string.Empty;
+        public string LabelConfig { get; set; } = string.Empty;
     }
 
     public class ReviewTaskDto
     {
         public int TaskId { get; set; }
-        public bool IsApproved { get; set; } 
-        public string? Comment { get; set; } 
+        public bool IsApproved { get; set; }
+        public string? Comment { get; set; }
+        public ErrorType? ErrorType { get; set; }
+
     }
 }

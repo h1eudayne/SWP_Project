@@ -90,6 +90,52 @@
         }
       }
     },
+    "/api/Project/{projectId}/stats": {
+      "get": {
+        "tags": [
+          "Project"
+        ],
+        "parameters": [
+          {
+            "name": "projectId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Project/{projectId}/export": {
+      "get": {
+        "tags": [
+          "Project"
+        ],
+        "parameters": [
+          {
+            "name": "projectId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Review/pending": {
       "get": {
         "tags": [
@@ -323,6 +369,18 @@
         },
         "additionalProperties": false
       },
+      "ErrorType": {
+        "enum": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          99
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
       "RegisterDto": {
         "required": [
           "password",
@@ -366,6 +424,9 @@
           "comment": {
             "type": "string",
             "nullable": true
+          },
+          "errorType": {
+            "$ref": "#/components/schemas/ErrorType"
           }
         },
         "additionalProperties": false

@@ -14,7 +14,7 @@ namespace DataLabeling.Core.Entities
         public User Annotator { get; set; }
 
         public ProjectTaskStatus Status { get; set; } = ProjectTaskStatus.New;
-
+        public ErrorType? ErrorType { get; set; }
         public string? LabelData { get; set; }
 
         public string? ReviewerComment { get; set; }

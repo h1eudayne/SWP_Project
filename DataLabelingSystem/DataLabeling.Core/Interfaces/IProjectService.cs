@@ -9,5 +9,7 @@ namespace DataLabeling.Core.Interfaces
         Task<ProjectViewDto> CreateProjectAsync(CreateProjectDto dto);
         Task<int> AddDataItemsAsync(AddDataItemDto dto);
         Task<IEnumerable<ProjectViewDto>> GetProjectsByManagerAsync(int managerId);
+        Task<ProjectProgressDto> GetProjectProgressAsync(int projectId);
+        Task<IEnumerable<ExportDataItemDto>> ExportApprovedDataAsync(int projectId);
     }
 }

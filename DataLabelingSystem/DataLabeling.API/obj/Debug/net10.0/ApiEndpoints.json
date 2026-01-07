@@ -1,6 +1,38 @@
 [
   {
     "ContainingType": "DataLabeling.API.Controllers.ProjectController",
+    "Method": "ExportProject",
+    "RelativePath": "api/Project/{projectId}/export",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "projectId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DataLabeling.API.Controllers.ProjectController",
+    "Method": "GetProjectStats",
+    "RelativePath": "api/Project/{projectId}/stats",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "projectId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "DataLabeling.API.Controllers.ProjectController",
     "Method": "AddData",
     "RelativePath": "api/Project/add-data",
     "HttpMethod": "POST",

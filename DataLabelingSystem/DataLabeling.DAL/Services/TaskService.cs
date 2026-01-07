@@ -30,6 +30,9 @@ namespace DataLabeling.BLL.Services
                 {
                     task.AnnotatorId = dto.AnnotatorId;
                     task.Status = ProjectTaskStatus.New;
+                    task.LabelData = null;      
+                    task.ReviewerComment = null; 
+
                     _unitOfWork.Repository<LabelTask>().Update(task);
                 }
             }
@@ -38,27 +41,34 @@ namespace DataLabeling.BLL.Services
 
         public async Task<IEnumerable<TaskViewDto>> GetTasksByAnnotatorAsync(int annotatorId)
         {
-
             var tasks = await _unitOfWork.Repository<LabelTask>()
                 .FindAsync(t => t.AnnotatorId == annotatorId);
 
             var result = new List<TaskViewDto>();
+
             foreach (var t in tasks)
             {
                 var dataItem = await _unitOfWork.Repository<DataItem>().GetByIdAsync(t.DataItemId);
-
-                result.Add(new TaskViewDto
+                if (dataItem != null)
                 {
-                    Id = t.Id,
-                    DataUrl = dataItem?.DataUrl ?? "N/A",
-                    Status = t.Status.ToString(),
-                    LabelData = t.LabelData,
-                    ProjectName = "Project ID: " + dataItem?.ProjectId
-                });
+                    var project = await _unitOfWork.Repository<Project>().GetByIdAsync(dataItem.ProjectId);
+
+                    result.Add(new TaskViewDto
+                    {
+                        Id = t.Id,
+                        DataUrl = dataItem.DataUrl,
+                        Status = t.Status.ToString(),
+                        LabelData = t.LabelData,
+                        ProjectName = project?.Name ?? $"Project {dataItem.ProjectId}",
+                        Instruction = project?.Instruction ?? "Không có hướng dẫn",
+                        LabelConfig = project?.LabelConfig ?? "",
+                        ReviewerComment = t.ReviewerComment,
+                        ErrorType = t.ErrorType.HasValue ? t.ErrorType.Value.ToString() : ""
+                    });
+                }
             }
             return result;
         }
-
         public async Task SubmitLabelAsync(SubmitLabelDto dto)
         {
             var task = await _unitOfWork.Repository<LabelTask>().GetByIdAsync(dto.TaskId);
@@ -67,7 +77,6 @@ namespace DataLabeling.BLL.Services
             task.LabelData = dto.LabelData;
             task.Status = ProjectTaskStatus.Submitted;
             task.LastUpdated = DateTime.Now;
-
             _unitOfWork.Repository<LabelTask>().Update(task);
             await _unitOfWork.CompleteAsync();
         }
@@ -103,11 +112,13 @@ namespace DataLabeling.BLL.Services
             {
                 task.Status = ProjectTaskStatus.Approved;
                 task.ReviewerComment = "Đã duyệt";
+                task.ErrorType = ErrorType.None;
             }
             else
             {
                 task.Status = ProjectTaskStatus.Rejected;
                 task.ReviewerComment = dto.Comment;
+                task.ErrorType = dto.ErrorType ?? ErrorType.Other;
             }
 
             task.LastUpdated = DateTime.Now;
