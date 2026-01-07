@@ -1,126 +1,52 @@
-# Build results
-[Dd]ebug/
-[Dd]ebugPublic/
-[Rr]elease/
-[Rr]eleases/
-x64/
-x86/
-[Ww][Ii][Nn]32/
-[Aa][Rr][Mm]/
-[Aa][Rr][Mm]64/
-bld/
+## --- Visual Studio & .NET Core ---
 [Bb]in/
 [Oo]bj/
-[Ll]og/
-[Ll]ogs/
-
-# Visual Studio files
 .vs/
+.vscode/
+.idea/
 *.user
 *.userosscache
 *.sln.docstates
 *.suo
 *.cache
-*.vspscc
-*.vssscc
-.builds
-*.pidb
-*.svclog
-*.scc
-
-# Visual Studio Code
-.vscode/
-
-# Rider
-.idea/
-
-# User-specific files
-*.rsuser
-*.userprefs
-
-# NuGet Packages
-*.nupkg
-*.snupkg
-**/[Pp]ackages/*
-!**/[Pp]ackages/build/
-*.nuget.props
-*.nuget.targets
-project.lock.json
-project.fragment.lock.json
-artifacts/
-
-# ASP.NET Scaffolding
-ScaffoldingReadMe.txt
-
-# StyleCop
-StyleCopReport.xml
-
-# Files built by Visual Studio
-*_i.c
-*_p.c
-*_h.h
-*.ilk
-*.meta
-*.obj
-*.iobj
-*.pch
 *.pdb
-*.ipdb
-*.pgc
-*.pgd
-*.rsp
-*.sbr
-*.tlb
-*.tli
-*.tlh
-*.tmp
-*.tmp_proj
-*_wpftmp.csproj
-*.log
-*.tlog
-*.vspscc
-*.vssscc
-.builds
-*.pidb
-*.svclog
-*.scc
+*.dll
+*.exe
 
-# Test Results
-[Tt]est[Rr]esult*/
-[Bb]uild[Ll]og.*
-*.VisualState.xml
-TestResult.xml
-
-# Node.js (if using for frontend)
 node_modules/
+bower_components/
+wwwroot/lib/
 npm-debug.log
+yarn-error.log
 
-# Windows
+## --- Test & Coverage ---
+TestResults/
+*.Trx
+*.VisualState.xml
+coverage/
+*.coverage
+*.coveragexml
+
+## --- OS Generated (Windows/Mac) ---
 Thumbs.db
 ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
-
-# macOS
 .DS_Store
 .AppleDouble
 .LSOverride
 
-# Application specific
-appsettings.Development.json
-appsettings.Local.json
-*.Development.json
-
-# Secrets
-secrets.json
-*.pfx
-*.key
-
-# Database
-*.mdf
-*.ldf
-*.ndf
-
-# Publish profiles
+## --- Publish & Packages ---
+*.nupkg
+*.snupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
 *.pubxml
-!**/[Pp]ublish[Pp]rofiles/*.pubxml
+publish/
+
+## --- Logs & Temporary Files ---
+*.log
+*.tmp
+*.bak
+*.swp
+*.lock
