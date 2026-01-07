@@ -124,3 +124,12 @@ secrets.json
 # Publish profiles
 *.pubxml
 !**/[Pp]ublish[Pp]rofiles/*.pubxml
+
+.vs/
+
+[Oo]bj/
+[Bb]in/
+
+*.suo
+*.user
+*.cache
