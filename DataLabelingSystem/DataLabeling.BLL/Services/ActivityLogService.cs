@@ -1,6 +1,7 @@
 using DataLabeling.Core.DTOs;
 using DataLabeling.Core.Entities;
 using DataLabeling.Core.Interfaces;
+using DataLabeling.DAL;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -11,11 +12,11 @@ namespace DataLabeling.BLL.Services
 {
     public class ActivityLogService : IActivityLogService
     {
-        private readonly IUnitOfWork _unitOfWork;
+        private readonly AppDbContext _context;
 
-        public ActivityLogService(IUnitOfWork unitOfWork)
+        public ActivityLogService(AppDbContext context)
         {
-            _unitOfWork = unitOfWork;
+            _context = context;
         }
 
         public async Task LogAsync(int? userId, string action, string entityType, string entityId, string details = "")
@@ -30,16 +31,15 @@ namespace DataLabeling.BLL.Services
                 Timestamp = DateTime.Now
             };
 
-            await _unitOfWork.Repository<ActivityLog>().AddAsync(log);
-            await _unitOfWork.CompleteAsync();
+            await _context.Set<ActivityLog>().AddAsync(log);
+            await _context.SaveChangesAsync();
         }
 
         public async Task<IEnumerable<ActivityLogDto>> GetLogsAsync()
         {
-            var logsQuery = _unitOfWork.Repository<ActivityLog>().AsQueryable();
-            var usersQuery = _unitOfWork.Repository<User>().AsQueryable();
-            var query = from log in logsQuery
-                        join u in usersQuery on log.UserId equals u.Id into users
+            // Join with Users to get username if UserId is present
+            var query = from log in _context.Set<ActivityLog>()
+                        join u in _context.Users on log.UserId equals u.Id into users
                         from user in users.DefaultIfEmpty()
                         orderby log.Timestamp descending
                         select new ActivityLogDto
