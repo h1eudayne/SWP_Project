@@ -24,6 +24,13 @@ namespace DataLabeling.API.Controllers
             return Ok(users);
         }
 
+        [HttpGet("annotators")]
+        public async Task<IActionResult> GetAnnotators()
+        {
+            var users = await _userService.GetUsersByRoleAsync(DataLabeling.Core.Enums.UserRole.Annotator);
+            return Ok(users);
+        }
+
         [HttpGet("{id}")]
         public async Task<IActionResult> GetUserById(int id)
         {

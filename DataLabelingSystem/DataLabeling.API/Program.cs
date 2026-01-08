@@ -2,7 +2,6 @@
 using DataLabeling.Core.Interfaces;
 using DataLabeling.DAL;
 using DataLabeling.DAL.Repositories;
-using DataLabeling.DAL.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

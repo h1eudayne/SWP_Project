@@ -18,7 +18,19 @@ namespace DataLabeling.BLL.Services
         {
             _unitOfWork = unitOfWork;
         }
+        public async Task<IEnumerable<UserDto>> GetUsersByRoleAsync(DataLabeling.Core.Enums.UserRole role)
+        {
+            var users = await _unitOfWork.Repository<User>().FindAsync(u => u.Role == role);
 
+            return users.Select(u => new UserDto
+            {
+                Id = u.Id,
+                Username = u.Username,
+                FullName = u.FullName,
+                Email = u.Email,
+                Role = u.Role.ToString()
+            });
+        }
         public async Task<IEnumerable<UserDto>> GetAllUsersAsync()
         {
             var users = await _unitOfWork.Repository<User>().GetAllAsync();

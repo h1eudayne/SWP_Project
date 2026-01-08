@@ -1,26 +1,33 @@
-﻿using System;
+﻿using DataLabeling.Core.DTOs;
+using DataLabeling.Core.Entities;
+using DataLabeling.Core.Enums;
+using DataLabeling.Core.Interfaces;
+using DataLabeling.DAL;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
-using DataLabeling.Core.Entities;
-using DataLabeling.Core.Interfaces;
-using DataLabeling.Core.DTOs;
-using DataLabeling.Core.Enums;
 
-namespace DataLabeling.DAL.Services
+namespace DataLabeling.BLL.Services
 {
     public class ProjectService : IProjectService
     {
+        private readonly IUnitOfWork _unitOfWork;
+
         private readonly AppDbContext _context;
 
-        public ProjectService(AppDbContext context)
+        public ProjectService(IUnitOfWork unitOfWork, AppDbContext context)
         {
+            _unitOfWork = unitOfWork;
             _context = context;
         }
 
         public async Task<ProjectViewDto> CreateProjectAsync(CreateProjectDto dto)
         {
+            var manager = await _unitOfWork.Repository<User>().GetByIdAsync(dto.ManagerId);
+            if (manager == null) throw new Exception("Người quản lý (ManagerId) không tồn tại.");
+
             var project = new Project
             {
                 Name = dto.Name,
@@ -31,35 +38,67 @@ namespace DataLabeling.DAL.Services
                 CreatedDate = DateTime.Now
             };
 
-            _context.Projects.Add(project);
-            await _context.SaveChangesAsync();
-            await _context.Entry(project).Reference(p => p.Manager).LoadAsync();
+            await _unitOfWork.Repository<Project>().AddAsync(project);
+            await _unitOfWork.CompleteAsync();
 
             return new ProjectViewDto
             {
                 Id = project.Id,
                 Name = project.Name,
                 Description = project.Description,
-                ManagerName = project.Manager?.FullName ?? "Unknown",
+                ManagerName = manager.FullName,
                 TotalImages = 0
             };
         }
-
         public async Task<int> AddDataItemsAsync(AddDataItemDto dto)
         {
-            var dataItems = dto.ImageUrls.Select(url => new DataItem
+            var project = await _unitOfWork.Repository<Project>().GetByIdAsync(dto.ProjectId);
+            if (project == null) throw new Exception("Dự án không tồn tại.");
+
+            using var transaction = await _context.Database.BeginTransactionAsync();
+            try
             {
-                DataUrl = url,
-                FileName = System.IO.Path.GetFileName(url), 
-                ProjectId = dto.ProjectId
-            }).ToList();
+                var dataItems = new List<DataItem>();
+                var tasks = new List<LabelTask>();
 
-            _context.DataItems.AddRange(dataItems);
-            await _context.SaveChangesAsync();
+                foreach (var url in dto.ImageUrls)
+                {
+                    var item = new DataItem
+                    {
+                        DataUrl = url,
+                        FileName = System.IO.Path.GetFileName(url),
+                        ProjectId = dto.ProjectId
+                    };
+                    dataItems.Add(item);
+                }
 
-            return dataItems.Count;
+                await _context.DataItems.AddRangeAsync(dataItems);
+                await _context.SaveChangesAsync();
+
+                foreach (var item in dataItems)
+                {
+                    tasks.Add(new LabelTask
+                    {
+                        DataItemId = item.Id,
+                        Status = ProjectTaskStatus.New,
+                        AnnotatorId = null,
+                        LabelData = null
+                    });
+                }
+
+                await _context.LabelTasks.AddRangeAsync(tasks);
+                await _context.SaveChangesAsync();
+
+                await transaction.CommitAsync();
+
+                return dataItems.Count;
+            }
+            catch
+            {
+                await transaction.RollbackAsync();
+                throw;
+            }
         }
-
         public async Task<IEnumerable<ProjectViewDto>> GetProjectsByManagerAsync(int managerId)
         {
             return await _context.Projects
@@ -75,23 +114,15 @@ namespace DataLabeling.DAL.Services
                 .ToListAsync();
         }
 
-
         public async Task<ProjectProgressDto> GetProjectProgressAsync(int projectId)
         {
+            var projectExists = await _context.Projects.AnyAsync(p => p.Id == projectId);
+            if (!projectExists) throw new Exception("Dự án không tồn tại.");
+
             var dataItems = await _context.DataItems
                                           .Include(d => d.LabelTask)
                                           .Where(d => d.ProjectId == projectId)
                                           .ToListAsync();
-
-            if (dataItems == null || !dataItems.Any())
-            {
-                return new ProjectProgressDto
-                {
-                    ProjectId = projectId,
-                    TotalItems = 0,
-                    PercentComplete = 0
-                };
-            }
 
             var stats = new ProjectProgressDto
             {

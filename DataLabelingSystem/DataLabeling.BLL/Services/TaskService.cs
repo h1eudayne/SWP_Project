@@ -28,10 +28,13 @@ namespace DataLabeling.BLL.Services
                 var task = await _unitOfWork.Repository<LabelTask>().GetByIdAsync(taskId);
                 if (task != null)
                 {
+                    if (task.Status == ProjectTaskStatus.Approved)
+                    {
+                        throw new Exception($"Task ID {taskId} đã hoàn thành, không thể phân công lại.");
+                    }
+
                     task.AnnotatorId = dto.AnnotatorId;
                     task.Status = ProjectTaskStatus.New;
-                    task.LabelData = null;      
-                    task.ReviewerComment = null; 
 
                     _unitOfWork.Repository<LabelTask>().Update(task);
                 }
@@ -69,14 +72,20 @@ namespace DataLabeling.BLL.Services
             }
             return result;
         }
+
         public async Task SubmitLabelAsync(SubmitLabelDto dto)
         {
             var task = await _unitOfWork.Repository<LabelTask>().GetByIdAsync(dto.TaskId);
             if (task == null) throw new Exception("Nhiệm vụ không tồn tại");
+            if (task.Status == ProjectTaskStatus.Approved)
+            {
+                throw new Exception("Nhiệm vụ này đã được duyệt (Approved), bạn không thể sửa đổi.");
+            }
 
             task.LabelData = dto.LabelData;
             task.Status = ProjectTaskStatus.Submitted;
             task.LastUpdated = DateTime.Now;
+
             _unitOfWork.Repository<LabelTask>().Update(task);
             await _unitOfWork.CompleteAsync();
         }
@@ -90,14 +99,13 @@ namespace DataLabeling.BLL.Services
             foreach (var t in tasks)
             {
                 var dataItem = await _unitOfWork.Repository<DataItem>().GetByIdAsync(t.DataItemId);
-
                 result.Add(new TaskViewDto
                 {
                     Id = t.Id,
                     DataUrl = dataItem?.DataUrl ?? "N/A",
                     ProjectName = "Project " + dataItem?.ProjectId,
                     Status = t.Status.ToString(),
-                    LabelData = t.LabelData 
+                    LabelData = t.LabelData
                 });
             }
             return result;
@@ -108,10 +116,15 @@ namespace DataLabeling.BLL.Services
             var task = await _unitOfWork.Repository<LabelTask>().GetByIdAsync(dto.TaskId);
             if (task == null) throw new Exception("Task không tồn tại");
 
+            if (task.Status == ProjectTaskStatus.New || task.Status == ProjectTaskStatus.InProgress)
+            {
+                throw new Exception("Annotator chưa nộp bài, không thể chấm điểm.");
+            }
+
             if (dto.IsApproved)
             {
                 task.Status = ProjectTaskStatus.Approved;
-                task.ReviewerComment = "Đã duyệt";
+                task.ReviewerComment = string.IsNullOrEmpty(dto.Comment) ? "Đã duyệt" : dto.Comment;
                 task.ErrorType = ErrorType.None;
             }
             else
