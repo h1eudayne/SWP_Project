@@ -20,14 +20,28 @@ namespace DataLabeling.API.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginDto dto)
         {
-            var user = await _userService.LoginAsync(dto);
+            var result = await _userService.LoginAsync(dto);
 
-            if (user == null)
+            if (result == null)
             {
                 return Unauthorized("Tên đăng nhập hoặc mật khẩu không chính xác.");
             }
 
-            return Ok(user);
+            return Ok(result); 
+        }
+
+        [HttpPost("refresh-token")]
+        public async Task<IActionResult> RefreshToken([FromBody] RefreshTokenDto dto)
+        {
+            try
+            {
+                var result = await _userService.RefreshTokenAsync(dto);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpGet]
