@@ -14,7 +14,7 @@ namespace DataLabeling.BLL.Services
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IActivityLogService _logService;
-        private readonly INotificationService _notificationService;
+        private readonly INotificationService _notificationService; 
 
         public ProjectService(IUnitOfWork unitOfWork, IActivityLogService logService, INotificationService notificationService)
         {
@@ -40,9 +40,7 @@ namespace DataLabeling.BLL.Services
 
             await _unitOfWork.Repository<Project>().AddAsync(project);
             await _unitOfWork.CompleteAsync();
-
             await _logService.LogAsync(dto.ManagerId, "Create", "Project", project.Id.ToString(), $"Created project {project.Name}");
-
             await _notificationService.NotifyProjectListUpdateAsync();
 
             return new ProjectViewDto
@@ -59,7 +57,6 @@ namespace DataLabeling.BLL.Services
         {
             var project = await _unitOfWork.Repository<Project>().GetByIdAsync(dto.ProjectId);
             if (project == null) throw new Exception("Dự án không tồn tại.");
-
             await _unitOfWork.BeginTransactionAsync();
             try
             {
@@ -74,11 +71,9 @@ namespace DataLabeling.BLL.Services
                         ProjectId = dto.ProjectId
                     };
                     dataItems.Add(item);
-
                     await _unitOfWork.Repository<DataItem>().AddAsync(item);
                 }
                 await _unitOfWork.CompleteAsync();
-
                 foreach (var item in dataItems)
                 {
                     var task = new LabelTask
@@ -86,7 +81,7 @@ namespace DataLabeling.BLL.Services
                         DataItemId = item.Id,
                         Status = ProjectTaskStatus.New,
                         AnnotatorId = null,
-                        LabelData = null
+                        LabelData = null 
                     };
                     await _unitOfWork.Repository<LabelTask>().AddAsync(task);
                 }
