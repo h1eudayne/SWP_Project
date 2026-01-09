@@ -17,6 +17,19 @@ namespace DataLabeling.API.Controllers
             _userService = userService;
         }
 
+        [HttpPost("login")]
+        public async Task<IActionResult> Login([FromBody] LoginDto dto)
+        {
+            var user = await _userService.LoginAsync(dto);
+
+            if (user == null)
+            {
+                return Unauthorized("Tên đăng nhập hoặc mật khẩu không chính xác.");
+            }
+
+            return Ok(user);
+        }
+
         [HttpGet]
         public async Task<IActionResult> GetAllUsers()
         {

@@ -13,7 +13,6 @@ namespace DataLabeling.BLL.Services
     public class ProjectService : IProjectService
     {
         private readonly IUnitOfWork _unitOfWork;
-
         private readonly IActivityLogService _logService;
 
         public ProjectService(IUnitOfWork unitOfWork, IActivityLogService logService)
@@ -74,7 +73,7 @@ namespace DataLabeling.BLL.Services
 
                     await _unitOfWork.Repository<DataItem>().AddAsync(item);
                 }
-                await _unitOfWork.CompleteAsync();
+                await _unitOfWork.CompleteAsync(); 
 
                 foreach (var item in dataItems)
                 {
@@ -87,7 +86,9 @@ namespace DataLabeling.BLL.Services
                     };
                     await _unitOfWork.Repository<LabelTask>().AddAsync(task);
                 }
-                await _unitOfWork.CommitTransactionAsync();
+                await _unitOfWork.CompleteAsync();
+
+                await _unitOfWork.CommitTransactionAsync(); 
 
                 return dataItems.Count;
             }
@@ -120,6 +121,7 @@ namespace DataLabeling.BLL.Services
         {
             var project = await _unitOfWork.Repository<Project>().GetByIdAsync(projectId);
             if (project == null) throw new Exception("Dự án không tồn tại.");
+
             var dataItems = await _unitOfWork.Repository<DataItem>()
                                           .AsQueryable()
                                           .Include(d => d.LabelTask)
