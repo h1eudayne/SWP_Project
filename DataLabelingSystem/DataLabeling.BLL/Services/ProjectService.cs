@@ -14,11 +14,13 @@ namespace DataLabeling.BLL.Services
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IActivityLogService _logService;
+        private readonly INotificationService _notificationService;
 
-        public ProjectService(IUnitOfWork unitOfWork, IActivityLogService logService)
+        public ProjectService(IUnitOfWork unitOfWork, IActivityLogService logService, INotificationService notificationService)
         {
             _unitOfWork = unitOfWork;
             _logService = logService;
+            _notificationService = notificationService;
         }
 
         public async Task<ProjectViewDto> CreateProjectAsync(CreateProjectDto dto)
@@ -40,6 +42,8 @@ namespace DataLabeling.BLL.Services
             await _unitOfWork.CompleteAsync();
 
             await _logService.LogAsync(dto.ManagerId, "Create", "Project", project.Id.ToString(), $"Created project {project.Name}");
+
+            await _notificationService.NotifyProjectListUpdateAsync();
 
             return new ProjectViewDto
             {
@@ -73,7 +77,7 @@ namespace DataLabeling.BLL.Services
 
                     await _unitOfWork.Repository<DataItem>().AddAsync(item);
                 }
-                await _unitOfWork.CompleteAsync(); 
+                await _unitOfWork.CompleteAsync();
 
                 foreach (var item in dataItems)
                 {
@@ -88,7 +92,9 @@ namespace DataLabeling.BLL.Services
                 }
                 await _unitOfWork.CompleteAsync();
 
-                await _unitOfWork.CommitTransactionAsync(); 
+                await _unitOfWork.CommitTransactionAsync();
+
+                await _notificationService.NotifyProjectUpdateAsync(dto.ProjectId);
 
                 return dataItems.Count;
             }
@@ -121,7 +127,6 @@ namespace DataLabeling.BLL.Services
         {
             var project = await _unitOfWork.Repository<Project>().GetByIdAsync(projectId);
             if (project == null) throw new Exception("Dự án không tồn tại.");
-
             var dataItems = await _unitOfWork.Repository<DataItem>()
                                           .AsQueryable()
                                           .Include(d => d.LabelTask)
